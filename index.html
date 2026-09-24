@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Timeless Automations – Nelly Opoku. Software en automatisatie voor vastgoedkantoren in België. Minder administratie, meer tijd voor uw klanten.">
+  <meta property="og:title" content="Timeless Automations – Nelly Opoku | Software en automatisatie voor vastgoedkantoren">
+  <meta property="og:description" content="Minder administratie en opvolging, meer tijd voor uw klanten. Voor vastgoedkantoren in Vlaanderen, Wallonië en Brussel.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="nl_BE">
+  <meta property="og:locale:alternate" content="fr_BE">
+  <title>Timeless Automations – Nelly Opoku | Software en automatisatie voor vastgoedkantoren</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231B4B6B'/%3E%3Cpath d='M8 22V10l8-4 8 4v12l-8 4-8-4z' fill='none' stroke='%23E8F1F5' stroke-width='1.5'/%3E%3Cpath d='M16 6v20M8 10l8 4 8-4' fill='none' stroke='%23E8F1F5' stroke-width='1.5'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!--
+    ============================================================
+    CONFIG — wijzig alles hieronder
+    ============================================================
+    fullName, businessName, email
+    phone          — leeg = rij verborgen; invullen = zichtbaar + tel-link
+    whatsapp       — nummer zonder spaties, bv. 32470123456; leeg = verborgen
+    linkedinUrl    — volledige URL; leeg = verborgen
+    photoSrc       — pad naar foto; leeg = initialen-avatar (bv. "NO")
+    Hero-secundaire knop: bij telefoon of WhatsApp → bellen/WA;
+    anders → scroll naar "Hoe het werkt".
+    ============================================================
+  -->
+  <script>
+    /* === CONFIG — pas hier aan === */
+    const CONFIG = {
+      fullName: "Nelly Opoku",
+      businessName: "Timeless Automations",
+      email: "lifeofnellzx101@gmail.com",
+      phone: "",
+      whatsapp: "",
+      linkedinUrl: "",
+      photoSrc: "foto.jpg" /* leeg = initialen-avatar */
+    };
+  </script>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="logo">Timeless Automations</a>
+      <nav class="nav" aria-label="Hoofdnavigatie">
+        <a href="#problemen" data-i18n="navProblems">Problemen</a>
+        <a href="#werkwijze" data-i18n="navHow">Werkwijze</a>
+        <a href="#over" data-i18n="navAbout">Over mij</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
+      </nav>
+      <div class="lang-toggle" role="group" aria-label="Taal / Langue">
+        <button type="button" id="btn-nl" class="lang-btn active" aria-pressed="true">NL</button>
+        <span class="lang-sep" aria-hidden="true">|</span>
+        <button type="button" id="btn-fr" class="lang-btn" aria-pressed="false">FR</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <p class="hero-name">
+          <span data-bind="fullName">Nelly Opoku</span>
+          <span class="hero-sep">·</span>
+          <span data-bind="businessName">Timeless Automations</span>
+        </p>
+        <h1 data-i18n="heroTitle">Software en automatisatie voor vastgoedkantoren</h1>
+        <p class="hero-sub" data-i18n="heroSub">Minder tijd aan administratie en opvolging, meer tijd voor uw klanten.</p>
+        <div class="hero-actions">
+          <a href="mailto:lifeofnellzx101@gmail.com" class="btn btn-primary" data-bind-href="mailto" data-i18n="btnContact">Contact opnemen</a>
+          <a href="#werkwijze" class="btn btn-secondary" id="hero-secondary" data-i18n="btnHow">Hoe het werkt</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROBLEMS -->
+    <section id="problemen" class="section">
+      <div class="container">
+        <h2 class="section-title" data-i18n="problemsTitle">Waar ik u mee help</h2>
+        <p class="section-intro" data-i18n="problemsIntro">Drie concrete knelpunten die ik voor vastgoedkantoren aanpak.</p>
+        <div class="cards">
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M4 4h16v12H5.17L4 17.17V4z"/><path d="M8 8h8M8 12h5"/></svg>
+            </div>
+            <h3 data-i18n="p1Title">Direct antwoord op nieuwe leads</h3>
+            <p data-i18n="p1Text">Nieuwe aanvragen van Immoweb, Zimmo en uw website krijgen meteen een reactie — ook buiten de kantooruren.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            </div>
+            <h3 data-i18n="p2Title">Automatische opvolging</h3>
+            <p data-i18n="p2Text">Herinneringen zodat geen enkele lead vergeten wordt. U weet precies wie nog een antwoord of een bezoek nodig heeft.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12h6M9 16h4"/></svg>
+            </div>
+            <h3 data-i18n="p3Title">Minder repetitieve administratie</h3>
+            <p data-i18n="p3Text">Leads sorteren (koper / verkoper / huurder), bevestigingen van bezoeken, standaardberichten — minder manueel werk.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="werkwijze" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title" data-i18n="howTitle">Hoe het werkt</h2>
+        <p class="section-intro" data-i18n="howIntro">Eenvoudig, zonder lange trajecten.</p>
+        <ol class="steps">
+          <li class="step">
+            <span class="step-num">1</span>
+            <div>
+              <h3 data-i18n="s1Title">Kort gesprek</h3>
+              <p data-i18n="s1Text">We bekijken samen waar in uw kantoor tijd verloren gaat — leads, opvolging of dagelijkse communicatie.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-num">2</span>
+            <div>
+              <h3 data-i18n="s2Title">Gratis demo of mock-up</h3>
+              <p data-i18n="s2Text">U krijgt een voorstel op maat van uw kantoor, zodat u ziet hoe het eruitziet vóór er iets gebouwd wordt.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-num">3</span>
+            <div>
+              <h3 data-i18n="s3Title">Bouwen en opzetten</h3>
+              <p data-i18n="s3Text">Ik werk met de tools die u al gebruikt en zorg dat alles rustig in uw dagelijkse werking past.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="over" class="section">
+      <div class="container about-inner">
+        <div class="about-photo-wrap">
+          <div class="about-photo" id="about-photo" role="img" aria-label="Nelly Opoku">
+            <span class="avatar-initials" aria-hidden="true">NO</span>
+          </div>
+        </div>
+        <div class="about-text">
+          <h2 class="section-title" data-i18n="aboutTitle">Over mij</h2>
+          <p data-i18n="about1">Hallo, ik ben Nelly Opoku. Ik bouw software en automatisaties voor vastgoedkantoren in België.</p>
+          <p data-i18n="about2">Ik werk met kantoren in Vlaanderen, Wallonië en Brussel — in het Nederlands én in het Frans. Mijn doel is eenvoudig: u helpen om minder tijd te steken in administratie, zodat u meer aandacht hebt voor uw klanten.</p>
+          <p data-i18n="about3">Geen grote beloftes, wel praktische oplossingen die aansluiten bij hoe u vandaag al werkt.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section section-alt">
+      <div class="container contact-inner">
+        <h2 class="section-title" data-i18n="contactTitle">Contact</h2>
+        <p class="section-intro" data-i18n="contactIntro">Een korte vraag of een vrijblijvend gesprek? Stuur gerust een bericht.</p>
+        <ul class="contact-list">
+          <li data-show-if="email">
+            <span class="contact-label" data-i18n="labelEmail">E-mail</span>
+            <a href="mailto:lifeofnellzx101@gmail.com" data-bind="email" data-bind-href="mailto">lifeofnellzx101@gmail.com</a>
+          </li>
+          <li data-show-if="phone" hidden>
+            <span class="contact-label" data-i18n="labelPhone">Telefoon</span>
+            <a href="#" data-bind="phone" data-bind-href="tel"></a>
+          </li>
+          <li data-show-if="whatsapp" hidden>
+            <span class="contact-label" data-i18n="labelWhatsApp">WhatsApp</span>
+            <a href="#" data-bind="whatsapp" data-bind-href="whatsapp"></a>
+          </li>
+          <li data-show-if="linkedinUrl" hidden>
+            <span class="contact-label" data-i18n="labelLinkedIn">LinkedIn</span>
+            <a href="#" data-bind="linkedinUrl" data-bind-href="linkedin" rel="noopener noreferrer" target="_blank"></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>
+        <span data-bind="fullName">Nelly Opoku</span>
+        <span class="footer-sep">·</span>
+        <span data-bind="businessName">Timeless Automations</span>
+        <span class="footer-sep">·</span>
+        <span>2026</span>
+      </p>
+      <p>
+        <a href="mailto:lifeofnellzx101@gmail.com" data-bind="email" data-bind-href="mailto">lifeofnellzx101@gmail.com</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    const I18N = {
+      nl: {
+        navProblems: "Problemen",
+        navHow: "Werkwijze",
+        navAbout: "Over mij",
+        navContact: "Contact",
+        heroTitle: "Software en automatisatie voor vastgoedkantoren",
+        heroSub: "Minder tijd aan administratie en opvolging, meer tijd voor uw klanten.",
+        btnContact: "Contact opnemen",
+        btnPhone: "Bellen / WhatsApp",
+        btnHow: "Hoe het werkt",
+        problemsTitle: "Waar ik u mee help",
+        problemsIntro: "Drie concrete knelpunten die ik voor vastgoedkantoren aanpak.",
+        p1Title: "Direct antwoord op nieuwe leads",
+        p1Text: "Nieuwe aanvragen van Immoweb, Zimmo en uw website krijgen meteen een reactie — ook buiten de kantooruren.",
+        p2Title: "Automatische opvolging",
+        p2Text: "Herinneringen zodat geen enkele lead vergeten wordt. U weet precies wie nog een antwoord of een bezoek nodig heeft.",
+        p3Title: "Minder repetitieve administratie",
+        p3Text: "Leads sorteren (koper / verkoper / huurder), bevestigingen van bezoeken, standaardberichten — minder manueel werk.",
+        howTitle: "Hoe het werkt",
+        howIntro: "Eenvoudig, zonder lange trajecten.",
+        s1Title: "Kort gesprek",
+        s1Text: "We bekijken samen waar in uw kantoor tijd verloren gaat — leads, opvolging of dagelijkse communicatie.",
+        s2Title: "Gratis demo of mock-up",
+        s2Text: "U krijgt een voorstel op maat van uw kantoor, zodat u ziet hoe het eruitziet vóór er iets gebouwd wordt.",
+        s3Title: "Bouwen en opzetten",
+        s3Text: "Ik werk met de tools die u al gebruikt en zorg dat alles rustig in uw dagelijkse werking past.",
+        aboutTitle: "Over mij",
+        about1: "Hallo, ik ben {fullName}. Ik bouw software en automatisaties voor vastgoedkantoren in België.",
+        about2: "Ik werk met kantoren in Vlaanderen, Wallonië en Brussel — in het Nederlands én in het Frans. Mijn doel is eenvoudig: u helpen om minder tijd te steken in administratie, zodat u meer aandacht hebt voor uw klanten.",
+        about3: "Geen grote beloftes, wel praktische oplossingen die aansluiten bij hoe u vandaag al werkt.",
+        contactTitle: "Contact",
+        contactIntro: "Een korte vraag of een vrijblijvend gesprek? Stuur gerust een bericht.",
+        labelEmail: "E-mail",
+        labelPhone: "Telefoon",
+        labelWhatsApp: "WhatsApp",
+        labelLinkedIn: "LinkedIn",
+        metaTitleSuffix: "Software en automatisatie voor vastgoedkantoren",
+        metaDesc: "Software en automatisatie voor vastgoedkantoren in België. Minder administratie, meer tijd voor uw klanten.",
+        navAria: "Hoofdnavigatie",
+        photoAria: "Profielfoto van {fullName}"
+      },
+      fr: {
+        navProblems: "Problèmes",
+        navHow: "Démarche",
+        navAbout: "À propos",
+        navContact: "Contact",
+        heroTitle: "Logiciels et automatisation pour agences immobilières",
+        heroSub: "Moins de temps à l’administration et au suivi, plus de temps pour vos clients.",
+        btnContact: "Me contacter",
+        btnPhone: "Appeler / WhatsApp",
+        btnHow: "Comment ça marche",
+        problemsTitle: "Comment je vous aide",
+        problemsIntro: "Trois points concrets que j’aborde pour les agences immobilières.",
+        p1Title: "Réponse immédiate aux nouvelles demandes",
+        p1Text: "Les nouvelles demandes d’Immoweb, Zimmo et de votre site reçoivent une réponse tout de suite — aussi en dehors des heures de bureau.",
+        p2Title: "Suivi automatique",
+        p2Text: "Des rappels pour qu’aucune demande ne soit oubliée. Vous savez exactement qui attend encore une réponse ou une visite.",
+        p3Title: "Moins d’administration répétitive",
+        p3Text: "Trier les leads (acheteur / vendeur / locataire), confirmer les visites, messages types — moins de travail manuel.",
+        howTitle: "Comment ça se passe",
+        howIntro: "Simple, sans long parcours.",
+        s1Title: "Court entretien",
+        s1Text: "Nous regardons ensemble où votre agence perd du temps — leads, suivi ou communication quotidienne.",
+        s2Title: "Démo ou maquette gratuite",
+        s2Text: "Vous recevez une proposition adaptée à votre agence, pour voir le résultat avant que quoi que ce soit soit construit.",
+        s3Title: "Construction et mise en place",
+        s3Text: "Je travaille avec les outils que vous utilisez déjà et j’intègre tout calmement dans votre fonctionnement quotidien.",
+        aboutTitle: "À propos",
+        about1: "Bonjour, je suis {fullName}. Je construis des logiciels et des automatisations pour les agences immobilières en Belgique.",
+        about2: "Je travaille avec des agences en Flandre, en Wallonie et à Bruxelles — en néerlandais et en français. Mon objectif est simple : vous aider à passer moins de temps sur l’administration, pour davantage d’attention à vos clients.",
+        about3: "Pas de grandes promesses, mais des solutions pratiques qui s’alignent sur votre façon de travailler aujourd’hui.",
+        contactTitle: "Contact",
+        contactIntro: "Une courte question ou un entretien sans engagement ? N’hésitez pas à m’écrire.",
+        labelEmail: "E-mail",
+        labelPhone: "Téléphone",
+        labelWhatsApp: "WhatsApp",
+        labelLinkedIn: "LinkedIn",
+        metaTitleSuffix: "Logiciels et automatisation pour agences immobilières",
+        metaDesc: "Logiciels et automatisation pour agences immobilières en Belgique. Moins d’administration, plus de temps pour vos clients.",
+        navAria: "Navigation principale",
+        photoAria: "Photo de profil de {fullName}"
+      }
+    };
+
+    function isFilled(val) {
+      if (val == null) return false;
+      const s = String(val).trim();
+      if (!s) return false;
+      if (/^\[.+\]$/.test(s)) return false;
+      return true;
+    }
+
+    function initialsFromName(name) {
+      const parts = String(name || "").trim().split(/\s+/).filter(Boolean);
+      if (!parts.length) return "?";
+      if (parts.length === 1) return parts[0].slice(0, 2).toUpperCase();
+      return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+    }
+
+    function metaTitle(lang) {
+      const suffix = I18N[lang].metaTitleSuffix;
+      const biz = CONFIG.businessName;
+      const name = CONFIG.fullName;
+      return `${biz} – ${name} | ${suffix}`;
+    }
+
+    function applyConfig() {
+      const c = CONFIG;
+
+      document.querySelectorAll("[data-bind]").forEach(el => {
+        const key = el.getAttribute("data-bind");
+        if (!(key in c)) return;
+        el.textContent = c[key] || "";
+        el.classList.remove("placeholder-text");
+      });
+
+      document.querySelectorAll("[data-show-if]").forEach(el => {
+        const key = el.getAttribute("data-show-if");
+        const show = isFilled(c[key]);
+        el.hidden = !show;
+      });
+
+      document.querySelectorAll("[data-bind-href]").forEach(el => {
+        const kind = el.getAttribute("data-bind-href");
+        if (kind === "mailto") {
+          el.href = "mailto:" + c.email;
+        } else if (kind === "tel") {
+          const clean = (c.phone || "").replace(/\s+/g, "");
+          el.href = isFilled(c.phone) ? "tel:" + clean : "#";
+        } else if (kind === "whatsapp") {
+          const clean = (c.whatsapp || "").replace(/\D/g, "");
+          el.href = isFilled(c.whatsapp) ? "https://wa.me/" + clean : "#";
+        } else if (kind === "linkedin") {
+          el.href = isFilled(c.linkedinUrl) ? c.linkedinUrl : "#";
+        }
+      });
+
+      /* Hero secondary: phone/WhatsApp if available, else scroll to how-it-works */
+      const secondary = document.getElementById("hero-secondary");
+      if (secondary) {
+        const hasPhone = isFilled(c.phone);
+        const hasWa = isFilled(c.whatsapp);
+        if (hasPhone || hasWa) {
+          secondary.dataset.mode = "call";
+          if (hasPhone) {
+            secondary.href = "tel:" + c.phone.replace(/\s+/g, "");
+          } else {
+            secondary.href = "https://wa.me/" + c.whatsapp.replace(/\D/g, "");
+          }
+        } else {
+          secondary.dataset.mode = "how";
+          secondary.href = "#werkwijze";
+        }
+      }
+
+      const photo = document.getElementById("about-photo");
+      if (photo) {
+        if (isFilled(c.photoSrc)) {
+          photo.style.backgroundImage = `url("${c.photoSrc}")`;
+          photo.classList.add("has-photo");
+          photo.classList.remove("is-avatar");
+          photo.innerHTML = "";
+        } else {
+          photo.style.backgroundImage = "";
+          photo.classList.remove("has-photo");
+          photo.classList.add("is-avatar");
+          const ini = initialsFromName(c.fullName);
+          photo.innerHTML = `<span class="avatar-initials" aria-hidden="true">${ini}</span>`;
+        }
+      }
+
+      const logo = document.querySelector(".logo");
+      if (logo) {
+        logo.textContent = c.businessName;
+        logo.classList.remove("placeholder-text");
+      }
+    }
+
+    function setLang(lang) {
+      const t = I18N[lang];
+      if (!t) return;
+
+      document.documentElement.lang = lang === "fr" ? "fr" : "nl";
+
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        /* Hero secondary label depends on mode */
+        if (el.id === "hero-secondary") {
+          const mode = el.dataset.mode || "how";
+          el.textContent = mode === "call" ? t.btnPhone : t.btnHow;
+          return;
+        }
+        let text = t[key];
+        if (text == null) return;
+        if (typeof text === "string" && text.includes("{fullName}")) {
+          el.textContent = text.replace("{fullName}", CONFIG.fullName);
+        } else {
+          el.textContent = text;
+        }
+      });
+
+      const title = metaTitle(lang);
+      document.title = title;
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) {
+        metaDesc.setAttribute(
+          "content",
+          `${CONFIG.businessName} – ${CONFIG.fullName}. ${t.metaDesc}`
+        );
+      }
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      if (ogTitle) ogTitle.setAttribute("content", title);
+      const ogDesc = document.querySelector('meta[property="og:description"]');
+      if (ogDesc) ogDesc.setAttribute("content", t.metaDesc);
+      const ogLocale = document.querySelector('meta[property="og:locale"]');
+      if (ogLocale) ogLocale.setAttribute("content", lang === "fr" ? "fr_BE" : "nl_BE");
+
+      const nav = document.querySelector(".nav");
+      if (nav) nav.setAttribute("aria-label", t.navAria);
+      const photo = document.getElementById("about-photo");
+      if (photo) {
+        photo.setAttribute(
+          "aria-label",
+          t.photoAria.replace("{fullName}", CONFIG.fullName)
+        );
+      }
+
+      document.getElementById("btn-nl").classList.toggle("active", lang === "nl");
+      document.getElementById("btn-fr").classList.toggle("active", lang === "fr");
+      document.getElementById("btn-nl").setAttribute("aria-pressed", lang === "nl" ? "true" : "false");
+      document.getElementById("btn-fr").setAttribute("aria-pressed", lang === "fr" ? "true" : "false");
+
+      try { localStorage.setItem("site-lang", lang); } catch (_) {}
+    }
+
+    document.getElementById("btn-nl").addEventListener("click", () => setLang("nl"));
+    document.getElementById("btn-fr").addEventListener("click", () => setLang("fr"));
+
+    applyConfig();
+    let initial = "nl";
+    try {
+      const saved = localStorage.getItem("site-lang");
+      if (saved === "fr" || saved === "nl") initial = saved;
+    } catch (_) {}
+    setLang(initial);
+  </script>
+</body>
+</html>
