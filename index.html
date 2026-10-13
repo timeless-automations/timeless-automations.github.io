@@ -83,6 +83,17 @@
             </button>
             <a class="btn btn-secondary btn-lg" href="https://lena-api-production-daf6.up.railway.app/dashboard/login">Log in</a>
           </div>
+          <div class="hear-lena-row">
+            <button type="button" class="hear-lena" id="hearLena" aria-label="Hear Lena" aria-pressed="false" aria-controls="lenaVoice">
+              <span class="hl-ico" aria-hidden="true">
+                <svg class="hl-play" viewBox="0 0 24 24" width="14" height="14"><path d="M8 5.5v13l10.5-6.5z" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/></svg>
+                <svg class="hl-pause" viewBox="0 0 24 24" width="14" height="14"><path d="M9 5.5v13M15 5.5v13" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg>
+              </span>
+              <span class="hl-label">Hear Lena</span>
+              <span class="hl-progress" aria-hidden="true"><i id="hearLenaBar"></i></span>
+            </button>
+            <audio id="lenaVoice" src="assets/lena/lena-voice.mp3" preload="none" playsinline></audio>
+          </div>
           <p class="small-print">Already have an account? <a href="https://lena-api-production-daf6.up.railway.app/dashboard/login">Log in</a></p>
           <ul class="trust-row">
             <li><span class="emo" aria-hidden="true">⚡</span>Test before going live</li>
@@ -98,10 +109,15 @@
               <img src="assets/lena/lena-full.png" alt="Lena, your AI receptionist" class="lena-full">
               <span class="headset-pulse" aria-hidden="true"></span>
             </div>
-            <div class="float-card fc-call">
-              <div class="fc-icon blue emo" aria-hidden="true">📞</div>
-              <div><b>Incoming call</b><small>Answered in 1 ring</small></div>
-            </div>
+            <button type="button" class="float-card fc-voice" id="lenaCallCard" aria-pressed="false" aria-controls="lenaVoice" aria-label="Hear Lena">
+              <span class="fv-ico" aria-hidden="true">
+                <span class="fv-ring"></span>
+                <svg viewBox="0 0 24 24" width="18" height="18"><path d="M5 4.5h3.2l1.6 4-2.1 1.3a11 11 0 0 0 6.5 6.5l1.3-2.1 4 1.6V19a1.5 1.5 0 0 1-1.6 1.5A16 16 0 0 1 3.5 6.1 1.5 1.5 0 0 1 5 4.5z" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/></svg>
+              </span>
+              <span class="fv-idle"><b>Incoming call…</b><small class="fv-cta"><span>Hear Lena</span><svg viewBox="0 0 24 24" width="11" height="11" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></small></span>
+              <span class="fv-live" aria-hidden="true"><b><i class="fv-dot"></i><span>Live</span> <span class="fv-time" id="lenaCallTime">0:00</span></b><span class="fv-wave"><i></i><i></i><i></i><i></i><i></i></span></span>
+              <span class="fv-pause" aria-hidden="true"><svg viewBox="0 0 24 24" width="13" height="13"><path d="M9 6v12M15 6v12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+            </button>
             <div class="float-card fc-book">
               <div class="fc-icon violet emo" aria-hidden="true">📅</div>
               <div><b>Viewing booked</b><small>Thu · 14:30</small></div>
@@ -714,5 +730,6 @@
 <div class="toast" id="toast"></div>
 <script src="assets/lena/i18n.js"></script>
 <script src="assets/lena/app.js"></script>
+<script src="assets/lena/hear-lena.js"></script>
 </body>
 </html>
