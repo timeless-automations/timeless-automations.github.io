@@ -2,6 +2,7 @@
    Static HTML text is keyed by its English source string; dynamic strings use the same keys. */
 window.I18N = {
 nl: {
+ "Call Lena (sector)": "Bel Lena",
  "Timeless X — Lena, your AI receptionist for phone & WhatsApp": "Timeless X — Lena, uw AI-receptioniste voor telefoon & WhatsApp", "Waitlist": "Wachtlijst", "You have just sent the form. Please try again in a few minutes.": "U heeft het formulier net al verstuurd. Probeer het binnen enkele minuten opnieuw.", "Please fill in all required fields with a valid email address.": "Vul alle verplichte velden in met een geldig e-mailadres.", "Join the waitlist": "Schrijf u in op de wachtlijst", "Close": "Sluiten",
  "Lena isn't publicly available yet. Leave your details and we'll get in touch as soon as there's a place for your business.": "Lena is nog niet publiek beschikbaar. Laat uw gegevens achter en we nemen contact met u op zodra er plaats is voor uw zaak.",
  "Company name": "Bedrijfsnaam", "Contact person": "Contactpersoon", "Email": "E-mail", "Sector": "Sector",
@@ -217,6 +218,7 @@ nl: {
  "greeting": "Hallo, ik ben Lena van {biz}. Waarmee kan ik u helpen?"
 },
 fr: {
+ "Call Lena (sector)": "Appelez Lena",
  "Timeless X — Lena, your AI receptionist for phone & WhatsApp": "Timeless X — Lena, votre réceptionniste IA pour téléphone & WhatsApp", "Waitlist": "Liste d’attente", "You have just sent the form. Please try again in a few minutes.": "Vous venez d’envoyer le formulaire. Réessayez dans quelques minutes.", "Please fill in all required fields with a valid email address.": "Veuillez remplir tous les champs obligatoires avec une adresse e-mail valide.", "Join the waitlist": "Inscrivez-vous sur la liste d’attente", "Close": "Fermer",
  "Lena isn't publicly available yet. Leave your details and we'll get in touch as soon as there's a place for your business.": "Lena n’est pas encore disponible publiquement. Laissez vos coordonnées et nous vous contacterons dès qu’une place se libère pour votre entreprise.",
  "Company name": "Nom de l’entreprise", "Contact person": "Personne de contact", "Email": "E-mail", "Sector": "Secteur",
@@ -430,7 +432,7 @@ fr: {
  "Today": "Auj.", "Unknown caller": "Appelant inconnu",
  "greeting": "Bonjour, je suis Lena de {biz}. Comment puis-je vous aider ?"
 },
-en: { "Meet Lena —": "Meet Lena\u00a0—", "greeting": "Hi, I'm Lena from {biz}. How can I help you today?" }
+en: { "Call Lena (sector)": "Call Lena", "Meet Lena —": "Meet Lena\u00a0—", "greeting": "Hi, I'm Lena from {biz}. How can I help you today?" }
 };
 
 /* Sector content per language (examples, sample calls, dashboard demo rows). */
